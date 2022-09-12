@@ -9,3 +9,4 @@ class Body_Self(x,y,z):
         pass
     def getself():
         pass
+        pass
