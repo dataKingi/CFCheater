@@ -44,3 +44,7 @@ F4刀距修改
 F6关闭透视
 Alt重新显示菜单
 END
+
+MSG
+Cshell_x64.dll+2A209C0
+MSGEND
