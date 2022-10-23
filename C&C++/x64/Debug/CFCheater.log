@@ -1,0 +1,8 @@
+﻿  CFCheater.cpp
+  CFCheaterDlg.cpp
+D:\source\repos\CFCheater\CFCheaterDlg.cpp(19,11): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+D:\source\repos\CFCheater\CFCheaterDlg.cpp(19,1): error C2365: “printf”: 重定义；以前的定义是“函数”
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\stdio.h(950): message : 参见“printf”的声明
+D:\source\repos\CFCheater\CFCheaterDlg.cpp(51,60): warning C4312: “类型强制转换”: 从“DWORD”转换到更大的“LPCVOID”
+D:\source\repos\CFCheater\CFCheaterDlg.cpp(55,59): warning C4312: “类型强制转换”: 从“DWORD”转换到更大的“LPVOID”
+  正在生成代码...

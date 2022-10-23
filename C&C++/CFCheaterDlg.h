@@ -38,4 +38,6 @@ private:
 
 	CButton m_bnTS;
 	HANDLE m_gameThread;
+public:
+	afx_msg HBRUSH OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor);
 };

@@ -77,11 +77,11 @@ DWORD monitorThreadFunc(LPVOID lpThreadParameter) {//监控游戏进程
 	return NULL;
 }
 
-void TS() {
+/*void TS() {
 	tsBaseAddress = (LONG)GetModuleHandleA("crossfire.exe") + 0x43AD44;
 
 
-}
+}*/
 
 // 用于应用程序“关于”菜单项的 CAboutDlg 对话框
 
@@ -139,6 +139,7 @@ BEGIN_MESSAGE_MAP(CCFCheaterDlg, CDialogEx)
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_START, &CCFCheaterDlg::OnBnClickedCourse)
 	ON_BN_CLICKED(IDC_TS, &CCFCheaterDlg::OnBnClickedTs)
+	ON_WM_CTLCOLOR()
 END_MESSAGE_MAP()
 
 
@@ -267,4 +268,33 @@ void CCFCheaterDlg::OnBnClickedTs()
 		WriteMemory(, , );*/
 		SetWindowTextA(gameHandle, "穿越火线");
 	}
+}
+
+
+HBRUSH CCFCheaterDlg::OnCtlColor(CDC* pDC, CWnd* pWnd, UINT nCtlColor)//处理控件透明
+{
+	HBRUSH hbr = CDialogEx::OnCtlColor(pDC, pWnd, nCtlColor);
+	// TODO:  在此更改 DC 的任何特性
+	if (pWnd->GetDlgCtrlID() == IDC_STATIC)     //IDC_DEVICE_STAT为Static控件的ID
+	{
+		pDC->SetBkMode(TRANSPARENT);   //设置透明属性
+		return (HBRUSH)GetStockObject(NULL_BRUSH);   //返回空画刷
+	}
+
+	UINT id = pWnd->GetDlgCtrlID();
+	if (id == IDC_TS)
+	{
+		pDC->SetBkMode(TRANSPARENT);
+		CRect rc;
+		pWnd->GetWindowRect(&rc);
+		ScreenToClient(&rc);
+		CDC* dc = GetDC();
+		pDC->BitBlt(0, 0, rc.Width(), rc.Height(), dc, rc.left, rc.top, SRCCOPY);  //<把父窗口背景图片先画到按钮上
+		ReleaseDC(dc);
+
+		hbr = (HBRUSH) ::GetStockObject(NULL_BRUSH);
+	}
+
+	// TODO:  如果默认的不是所需画笔，则返回另一个画笔
+	return hbr;
 }

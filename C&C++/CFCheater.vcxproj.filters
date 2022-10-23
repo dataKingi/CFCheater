@@ -54,6 +54,9 @@
     <None Include="res\CFCheater.rc2">
       <Filter>资源文件</Filter>
     </None>
+    <None Include="res\wave1.bin">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\CFCheater.ico">
@@ -62,5 +65,52 @@
     <Image Include="D:\CF\一键断网\Bitmap.bmp">
       <Filter>资源文件</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="..\..\..\CF\一键断网\音效\断网.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="..\..\..\CF\一键断网\音效\0.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="..\..\..\CF\一键断网\音效\1.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="..\..\..\CF\一键断网\音效\2.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="..\..\..\CF\一键断网\音效\3.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="..\..\..\CF\一键断网\音效\4.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="..\..\..\CF\一键断网\音效\5.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="..\..\..\CF\一键断网\音效\6.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="..\..\..\CF\一键断网\音效\7.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="..\..\..\CF\一键断网\音效\8.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="..\..\..\CF\一键断网\音效\9.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="..\..\..\CF\一键断网\音效\10.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="..\..\..\CF\一键断网\音效\360.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="..\..\..\CF\一键断网\音效\NL4.wav">
+      <Filter>资源文件</Filter>
+    </Media>
+    <Media Include="..\..\..\CF\一键断网\音效\连网.wav">
+      <Filter>资源文件</Filter>
+    </Media>
   </ItemGroup>
 </Project>
